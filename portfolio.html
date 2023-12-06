@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samir Hadi Cisneros | Portfolio</title>
+
+    <!--
+    - favicon
+  -->
+    <link rel="shortcut icon" href="ProfPic.jpeg" type="image/x-icon" />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="PortfolioStyle.css" />
+
+    <!-- Additional stylesheet for pixel animation -->
+    <link rel="stylesheet" href="links.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- pixelated stars background from links.css -->
+    <section class="animated-background">
+      <div id="stars1"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </section>
+
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img src="LongProfPic.jpeg" alt="Samir" width="80" />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Samir Hadi Cisneros">
+              Samir Hadi Cisneros
+            </h1>
+
+            <p class="title">Software Engineer</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Contact Info</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+                <a href="mailto:samirhadi929@gmail.com" class="contact-link"
+                  >samirhadi929@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+                <address>Atlanta, Georgia</address>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="School"></ion-icon>
+              </div>
+              <div class="contact-info">
+                <p class="contact-title">University</p>
+                <address>University of Georgia</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="https://github.com/samirhadii" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="https://www.linkedin.com/in/samirhadi/"
+                class="social-link"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a class="navbar-link active" href="#about">About</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#experience">Experience</a>
+            </li>
+            <li class="navbar-item">
+              <a class="navbar-link" href="#projects">Projects</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text" id="about">
+            <p>
+              <strong>Hi! Welcome to my portfolio.</strong> My name is Samir
+              Hadi Cisneros, I am a computer science student at the University
+              of Georgia graduating in December 2023 currently seeking a
+              full-time software engineering role. I have held three previous
+              software engineering experiences where i have built software
+              solutions at scale, and i have deployed several different personal
+              projects that have given me real-world experience in developing
+              software. <br /><br />
+
+              <strong>Outside of work:</strong> I am a huge soccer fan, I play
+              pickup soccer anytime I can, and watch the Premier Legaue every
+              weekend. Additionally, I am learning to sew and am working on
+              building my own wardrobe.
+            </p>
+          </section>
+
+          <section class="timeline" id="experience">
+            <section class="timeline">
+              <div class="title-wrapper">
+                <div class="icon-box">
+                  <ion-icon name="terminal-outline"></ion-icon>
+                </div>
+
+                <h3 class="h3">Professional Experience</h3>
+              </div>
+
+              <ol class="timeline-list">
+                <li class="timeline-item">
+                  <h4 class="h4 timeline-item-title">
+                    Software Engineering Intern
+                    <p class="timeline-text">CLEAR - New York, New York</p>
+                  </h4>
+
+                  <span>June 2023 - Aug 2023</span>
+
+                  <p class="timeline-text">
+                    Worked on the flagship iOS app and delivered a proof of
+                    concept leveraging <b>Swift</b> & Bluetooth IoT hardware.
+                    Developed a full-stack demo service using <b>React</b> in
+                    <b>Javascript</b> and <b>Flask</b> in <b>Python</b> to
+                    present to senior leadership. Intern project streamlined
+                    CLEAR verification experience for over 5 million members,
+                    reducing verification time.
+                  </p>
+                </li>
+
+                <li class="timeline-item">
+                  <h4 class="h4 timeline-item-title">
+                    Software Engineer Intern
+                    <p class="timeline-text">Signify - Atlanta, Georgia</p>
+                  </h4>
+
+                  <span>Jan 2023 - May 2023</span>
+
+                  <p class="timeline-text">
+                    Played a key role in developing Wavelinx Lite version 5.0, a
+                    mobile app that controls IoT connected smart lights.
+                    Operated as a backend engineer building a wide variety of
+                    <b>Rest API’s</b> using <b>Java & Spring Framework</b> for
+                    the app. Worked as the sole intern in an agile team using
+                    industry best practices in version control, debugging, and
+                    testing.
+                  </p>
+                </li>
+
+                <li class="timeline-item">
+                  <h4 class="h4 timeline-item-title">
+                    Software Engineer Intern
+                    <p class="timeline-text">NCR - Atlanta, Georgia</p>
+                  </h4>
+
+                  <span>May 2022 - August 2022</span>
+
+                  <p class="timeline-text">
+                    Full stack engineer used <b>Spring</b> with <b>React</b> to
+                    create <b>REST APIs</b> generating reports for 200,000+
+                    customers. Collaborated with three other interns and senior
+                    developers in a test-driven agile scrum team. Spearheaded
+                    project deploying into the consumer facing web app, &
+                    reduced product delivery timeline by a year.
+                  </p>
+                </li>
+              </ol>
+            </section>
+
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Education</h3>
+            </div>
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">University of Georgia</h4>
+                <span>Aug 2020 — Dec 2023</span>
+                <p class="timeline-text">
+                  Bachelors of Science B.S. in Computer Science
+                </p>
+                <p class="timeline-text">Zell Miller Scholar</p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Parkview High School</h4>
+                <span>Aug 2016 — May 2020</span>
+                <p class="timeline-text">Recieved Georgia Seal of Biliteracy</p>
+              </li>
+            </ol>
+          </section>
+
+          <header>
+            <h2 class="h2 article-title">Projects</h2>
+          </header>
+
+          <section class="projects" id="projects">
+            <ul class="project-list">
+
+              <li class="project-item active">
+                <a
+                  href="https://github.com/samirhadii/ItiniReady"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="images/Itiniready_thumbnail.jpeg"
+                      alt="Itini-Ready"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Itini-Ready</h3>
+                  <p class="project-category">Backend Development / ML</p>
+                </a>
+              </li>
+
+              <li class="project-item active">
+                <a
+                  href="https://github.com/samirhadii/adminbase"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="images/WatchDawgCinemas.jpg"
+                      alt="WatchDawgs Cinema"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">WatchDawgs Cinema</h3>
+                  <p class="project-category">Full-Stack Development</p>
+                </a>
+              </li>
+
+              <li class="project-item active">
+                <a
+                  href="https://www.wirtgen-group.com/en-us/"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="images/wirtgen_logo.jpeg"
+                      alt="Itini-Ready"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Wirtgen Inspection App</h3>
+                  <p class="project-category">Full-Stack Development</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
+
+<!-- add skills later if I want -->
+<!-- <section class="skill">
+            <h3 class="h3 skills-title">My skills</h3>
+
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">React</h5>
+                  <data value="80">80%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">TailwindCss</h5>
+                  <data value="80">80%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Figma</h5>
+                  <data value="90">90%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">HTML, CSS, Javascript</h5>
+                  <data value="90">90%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Python</h5>
+                  <data value="60">60%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 60%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">C/C++</h5>
+                  <data value="60">60%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 60%"></div>
+                </div>
+              </li>
+            </ul>
+          </section> -->
