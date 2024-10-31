@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Blog</title>
+    <link rel="stylesheet" href="blog.css" />
+  </head>
+  <body>
+    <header>
+      <h1>s15s blog</h1>
+    </header>
+    <main>
+      <section id="post-list">
+        <h2>Blog Posts</h2>
+        <ul>
+          <li><a href="?post=post1">First Blog Post</a></li>
+        </ul>
+      </section>
+      <section id="post-content" style="display: none">
+        <a href="index.html" class="back-button">&#8592;</a>
+        <h2 id="post-title"></h2>
+        <article id="post-body"></article>
+      </section>
+    </main>
+    <script src="blog.js"></script>
+  </body>
+</html>
