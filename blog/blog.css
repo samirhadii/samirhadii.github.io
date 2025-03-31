@@ -1,70 +1,118 @@
+/* Base styles */
 :root {
-    --bgColor: #223344;
-    --bgColor2: #090a0f;
-}
-
-body {
-    font-family: Arial, sans-serif;
+    --bg-color: #0d0d0d;
+    --text-color: #e6e6e6db;
+    --accent-color: #ff6200;
+    --secondary-text: #8c8c8c;
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    text-align: center;
-}
-
-main {
-    display: flex;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding: 3rem;
+  }
+  
+  main {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#post-list {
-    flex: 1;
-    margin-right: 20px;
-}
-
-#post-content {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 20px; /* Space between title and content */
-}
-
-ul {
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  
+  header {
+    margin-bottom: 3rem;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--accent-color);
+  }
+  
+  #about {
+    margin-bottom: 3rem;
+  }
+  
+  #about h2 {
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  #about p {
+    max-width: 650px;
+    color: var(--text-color);
+  }
+  
+  #post-list ul {
     list-style-type: none;
-    padding: 0;
-}
-
-a {
-    color: #007acc;
+  }
+  
+  #post-list li  
+  #post-list li {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+  
+  #post-list li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-size: 1.2rem;
+  }
+  
+  #post-list a {
+    color: var(--text-color);
     text-decoration: none;
-}
-
-a:hover {
+  }
+  
+  #post-list a:hover {
     text-decoration: underline;
-}
-.back-button {
-    margin-right: 10px; /* Add some space between the back button and the title */
-    font-size: 20px; /* Adjust the font size for better visibility */
-    text-decoration: none; /* Remove underline */
-}
-
-
-.back-button:focus {
-    outline: none; /* Remove default focus outline */
-}
-
-#post-content {
-    position: relative; /* Positioning context for the button */
-}
-#post-title {
-    margin: 0; /* Remove default margin */
-    font-size: 24px; /* Adjust title size as needed */
-
-}
+  }
+  
+  #post-content {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  
+  #post-content h1, #post-content h2, #post-content h3 {
+    margin-bottom: 1rem;
+  }
+  
+  #post-content p {
+    margin-bottom: 2rem;
+  }
+  
+  p:last-of-type {
+    margin-top: 2rem;
+    color: var(--secondary-text);
+    font-family: monospace;
+  }
+  
+  .back-button {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+  
+  .back-button:hover {
+    text-decoration: underline;
+  }
+  
+  h1, h2, h3 {
+    color: var(--text-color);
+    font-weight: 700;
+  }

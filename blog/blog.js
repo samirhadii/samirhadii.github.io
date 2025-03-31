@@ -26,24 +26,20 @@ function loadPost() {
       })
       .then((markdown) => {
         // Set the title and convert Markdown to HTML
-        document.getElementById("post-title").innerText = postKey.replace(
-          /_/g,
-          " "
-        ); // Format the title
-        document.getElementById("post-body").innerHTML =
-          convertMarkdownToHTML(markdown);
+        document.getElementById("post-title").innerText = postKey.replace(/_/g, " ");
+        document.getElementById("post-body").innerHTML = convertMarkdownToHTML(markdown);
 
         // Toggle visibility
+        document.getElementById("about").style.display = "none";
         document.getElementById("post-list").style.display = "none";
         document.getElementById("post-content").style.display = "block";
       })
       .catch((error) => {
-        document.getElementById(
-          "post-body"
-        ).innerHTML = `<p>Could not load the post. ${error.message}</p>`;
+        document.getElementById("post-body").innerHTML = `<p>Could not load the post. ${error.message}</p>`;
       });
   } else {
-    // Show the list by default
+    // Show the about and list by default
+    document.getElementById("about").style.display = "block";
     document.getElementById("post-list").style.display = "block";
     document.getElementById("post-content").style.display = "none";
   }
