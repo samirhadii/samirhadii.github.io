@@ -16,7 +16,6 @@ function loadPost() {
   const postKey = urlParams.get("post");
 
   if (postKey) {
-    // Fetch the Markdown file from the /posts/ folder
     fetch(`posts/${postKey}.md`)
       .then((response) => {
         if (!response.ok) {
@@ -38,7 +37,6 @@ function loadPost() {
         document.getElementById("post-body").innerHTML = `<p>Could not load the post. ${error.message}</p>`;
       });
   } else {
-    // Show the about and list by default
     document.getElementById("about").style.display = "block";
     document.getElementById("post-list").style.display = "block";
     document.getElementById("post-content").style.display = "none";

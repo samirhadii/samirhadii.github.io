@@ -87,7 +87,8 @@
     margin: 0 auto;
   }
   
-  #post-content h1, #post-content h2, #post-content h3 {
+  #post-body h1, #post-body h2, #post-body h3 {
+    color: var(--accent-color);
     margin-bottom: 1rem;
   }
   
@@ -113,6 +114,6 @@
   }
   
   h1, h2, h3 {
-    color: var(--text-color);
+    color: var(--accent-color);
     font-weight: 700;
   }
