@@ -10,6 +10,21 @@ function convertMarkdownToHTML(markdown) {
     .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>');
 }
 
+function updateMetaTags(title, description) {
+  // Update Open Graph tags
+  const metaOgTitle = document.querySelector('meta[property="og:title"]');
+  const metaOgDescription = document.querySelector('meta[property="og:description"]');
+  const metaOgUrl = document.querySelector('meta[property="og:url"]');
+  // Optionally update image if you have one, else keep it empty
+  // const metaOgImage = document.querySelector('meta[property="og:image"]');
+
+  if (metaOgTitle) metaOgTitle.setAttribute("content", title);
+  if (metaOgDescription) metaOgDescription.setAttribute("content", description);
+  if (metaOgUrl) metaOgUrl.setAttribute("content", window.location.href);
+  // if (metaOgImage) metaOgImage.setAttribute("content", yourImageUrl);
+}
+
+
 // Function to load post content from Markdown file
 function loadPost() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -24,23 +39,30 @@ function loadPost() {
         return response.text();
       })
       .then((markdown) => {
-        // Convert Markdown to HTML
         let htmlContent = convertMarkdownToHTML(markdown);
-        // Create a temporary container to manipulate the HTML
         const tempDiv = document.createElement("div");
         tempDiv.innerHTML = htmlContent;
 
-        // Find the first h1 and use it as the title if it exists
+        // Extract the first <h1> as the title, if available
         const firstH1 = tempDiv.querySelector("h1");
+        let postTitle, postDescription;
         if (firstH1) {
-          document.getElementById("post-title").innerText = firstH1.textContent;
-          firstH1.remove(); // remove the h1 from the content
+          postTitle = firstH1.textContent;
+          firstH1.remove(); // Remove the title from the content
         } else {
-          // Fallback: use the filename (with underscores replaced by spaces)
-          document.getElementById("post-title").innerText = postKey.replace(/_/g, " ");
+          // Fallback to using the file name
+          postTitle = postKey.replace(/_/g, " ");
         }
+        
+        // For a description, you might extract the first paragraph
+        const firstParagraph = tempDiv.querySelector("p");
+        postDescription = firstParagraph ? firstParagraph.textContent : "Read the latest s88s Blog post.";
 
-        // Set the remaining HTML as the post body
+        // Update meta tags with dynamic content
+        updateMetaTags(postTitle, postDescription);
+
+        // Set the title and post body content
+        document.getElementById("post-title").innerText = postTitle;
         document.getElementById("post-body").innerHTML = tempDiv.innerHTML;
 
         // Toggle visibility
@@ -57,6 +79,7 @@ function loadPost() {
     document.getElementById("post-content").style.display = "none";
   }
 }
+
 
 // Load the correct content based on URL
 window.onload = loadPost;
