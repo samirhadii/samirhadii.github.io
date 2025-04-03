@@ -1,11 +1,11 @@
 # Why I Love Markdown
 
-The debate over the best way to capture and store information has become surprisingly polarizing on the internet. Whether you’re using an iPad, a simple text file, or a modern note-taking app like Notion, everyone seems to have undying loyalty to their favorite method. In this post, I’ll explore why, I’ve embraced markdown as my go-to digital text storage tool. 
+The debate over the best way to capture and store information has become surprisingly polarizing on the internet. Whether you’re using an iPad, a simple text file, or a modern note-taking app like Notion, everyone seems to have undying loyalty to their favorite method. In this post, I’ll explore why I have embraced markdown as my go-to digital text storage tool. 
 
 
 ### Handwriting Notes to Markdown
 
-I've always been a lover of handwriting my notes with a pen and paper. It's an easy way for me to quickly get my ideas down and it physically writing enahnces neuroplasticity. But, when circumstances require digital note taking I always opt for an experience that mirrors the ease of writing by hand. That's where markdown comes in. Amid the constant online debates around the best way to store text, markdown is my favorite. It can do anything you need for simple notes, and is essentially just a formatted text file so it is intuitive and incredibly fast to load on any computer. 
+I've always been a lover of handwriting my notes with a pen and paper. It's an easy way for me to quickly get my ideas down and writing physically actually enahnces neuroplasticity. But, when circumstances require digital note taking I always opt for an experience that mirrors the ease of writing by hand. That's where markdown comes in. Amid the constant online debates around the best way to store text, markdown is my favorite. It can do anything you need for simple notes, and is essentially just a formatted text file so it is intuitive and incredibly fast to load on any computer. 
 
 
 ### Alternate Note-Taking Tools

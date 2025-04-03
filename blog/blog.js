@@ -24,9 +24,24 @@ function loadPost() {
         return response.text();
       })
       .then((markdown) => {
-        // Set the title and convert Markdown to HTML
-        document.getElementById("post-title").innerText = postKey.replace(/_/g, " ");
-        document.getElementById("post-body").innerHTML = convertMarkdownToHTML(markdown);
+        // Convert Markdown to HTML
+        let htmlContent = convertMarkdownToHTML(markdown);
+        // Create a temporary container to manipulate the HTML
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = htmlContent;
+
+        // Find the first h1 and use it as the title if it exists
+        const firstH1 = tempDiv.querySelector("h1");
+        if (firstH1) {
+          document.getElementById("post-title").innerText = firstH1.textContent;
+          firstH1.remove(); // remove the h1 from the content
+        } else {
+          // Fallback: use the filename (with underscores replaced by spaces)
+          document.getElementById("post-title").innerText = postKey.replace(/_/g, " ");
+        }
+
+        // Set the remaining HTML as the post body
+        document.getElementById("post-body").innerHTML = tempDiv.innerHTML;
 
         // Toggle visibility
         document.getElementById("about").style.display = "none";

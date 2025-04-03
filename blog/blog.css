@@ -117,3 +117,18 @@
     color: var(--accent-color);
     font-weight: 700;
   }
+
+  /* Make the post title larger and add top margin */
+#post-title {
+  font-size: 2.5rem; /* Adjust as needed */
+  margin-top: 2rem;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Style h2 and h3 inside post body with more top spacing */
+#post-body h2,
+#post-body h3 {
+  margin-top: 1.5rem;
+}
+
