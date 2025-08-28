@@ -7,7 +7,10 @@ function convertMarkdownToHTML(markdown) {
     .replace(/^\* (.*?)$/gm, "<ul><li>$1</li></ul>")
     .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.*?)\*/g, "<em>$1</em>")
-    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>');
+    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2">$1</a>')
+    .replace(/\n\s*\n/g, "</p><p>")
+    .replace(/(?<!<\/p>)\n/g, "<br>")
+    .replace(/^(?!<h|<ul|<p)(.+)$/gm, "<p>$1</p>");
 }
 
 function updateMetaTags(title, description) {
