@@ -132,3 +132,13 @@
   margin-top: 1.5rem;
 }
 
+#post-body img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 6px;
+}
+
+
+
