@@ -11,6 +11,7 @@
     <!-- Favicon -->
     <link rel="icon" href="ProfPic.jpeg" type="image/x-icon" />
     <link rel="stylesheet" href="menu.css">
+<base target="_blank">
 </head>
 <body>
     <!-- Background Layers -->
@@ -18,7 +19,7 @@
     <canvas id="canvas"></canvas>
     <div class="particles"></div>
     <div class="launch-overlay" id="launchOverlay"></div>
-    
+
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="top-left">
@@ -34,12 +35,17 @@
             </svg>
         </div>
     </div>
-    
+
     <!-- Main Menu -->
     <div class="menu-container">
         <div class="menu-row" id="menuRow">
-            <div class="side-indicator left" id="leftIndicator">◀</div>
-            
+            <!-- Left Arrow Indicator - SVG instead of Unicode -->
+            <div class="side-indicator left" id="leftIndicator">
+                <svg class="arrow-svg" viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                </svg>
+            </div>
+
             <div class="menu-item active" data-index="0" data-url="SamirHadiCisneros_Resume.pdf">
                 <div class="icon-wrapper">
                     <svg class="icon-svg" viewBox="0 0 24 24">
@@ -49,7 +55,7 @@
                 <div class="item-label">Resume</div>
                 <div class="selection-arrow"></div>
             </div>
-            
+
             <div class="menu-item" data-index="1" data-url="https://www.linkedin.com/in/samirhadi/">
                 <div class="icon-wrapper">
                     <svg class="icon-svg" viewBox="0 0 24 24">
@@ -59,7 +65,7 @@
                 <div class="item-label">LinkedIn</div>
                 <div class="selection-arrow"></div>
             </div>
-            
+
             <div class="menu-item" data-index="2" data-url="portfolio.html">
                 <div class="icon-wrapper">
                     <svg class="icon-svg" viewBox="0 0 24 24">
@@ -69,7 +75,7 @@
                 <div class="item-label">Portfolio</div>
                 <div class="selection-arrow"></div>
             </div>
-            
+
             <div class="menu-item" data-index="3" data-url="https://github.com/samirhadii">
                 <div class="icon-wrapper">
                     <svg class="icon-svg" viewBox="0 0 24 24">
@@ -79,11 +85,16 @@
                 <div class="item-label">GitHub</div>
                 <div class="selection-arrow"></div>
             </div>
-            
-            <div class="side-indicator right" id="rightIndicator">▶</div>
+
+            <!-- Right Arrow Indicator - SVG instead of Unicode -->
+            <div class="side-indicator right" id="rightIndicator">
+                <svg class="arrow-svg" viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                </svg>
+            </div>
         </div>
     </div>
-    
+
     <!-- Bottom Bar -->
     <div class="bottom-bar">
         <div class="controls-hint">
@@ -101,11 +112,11 @@
             </div>
         </div>
         <div class="swipe-hint">
-            <span>← Swipe to navigate →</span>
+            <span>↑↓ Swipe to navigate</span>
         </div>
-        <div>PS2 Style Menu</div>
+        <div>Links Menu</div>
     </div>
-    
+
     <script src="menu.js"></script>
 </body>
 </html>
